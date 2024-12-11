@@ -12,7 +12,7 @@ Features
     Edit Expense: Enables users to update existing expense records for corrections or changes.
 
 Home page
-![image](https://github.com/user-attachments/assets/4c7f2091-e802-41ed-86b9-96d4e3a5564d)
+![image](https://github.com/user-attachments/assets/c12c1bde-79c9-4d07-a1da-e6388dbcd059)
 
 Add Expanse
 ![image](https://github.com/user-attachments/assets/e72c1663-f4b5-4fcc-b79e-27adc761950b)
