@@ -1,23 +1,51 @@
-from flask import Flask, render_template, request, redirect, url_for
+from flask import Flask, render_template, request, redirect, url_for, send_file
 from flask_sqlalchemy import SQLAlchemy
+import matplotlib.pyplot as plt
+import io
+import base64
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///expenses.db'  #db configuration
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///expenses.db'  # config for db
 db = SQLAlchemy(app)
 
-class Expense(db.Model):  # Created Database Model
+class Expense(db.Model):            #create db model
     id = db.Column(db.Integer, primary_key=True)
     category = db.Column(db.String(100), nullable=False)
     amount = db.Column(db.Float, nullable=False)
-    comments = db.Column(db.String(500))                     
+    comments = db.Column(db.String(500))
 
-with app.app_context():  # Initialize db
-    db.create_all()                   
+with app.app_context():    # Initialize db
+    db.create_all()
 
 @app.route('/')
 def home():
     expenses = Expense.query.all() 
-    return render_template('index.html', expenses=expenses)
+    
+    categories = {}
+    for expense in expenses:
+        if expense.category in categories:
+            categories[expense.category] += expense.amount
+        else:
+            categories[expense.category] = expense.amount
+
+    category_labels = list(categories.keys())
+    category_values = list(categories.values())
+    
+    fig, ax = plt.subplots()
+    ax.bar(category_labels, category_values)
+    ax.set_xlabel('Categories')
+    ax.set_ylabel('Total Expense')
+    ax.set_title('Category-wise Expense Distribution')
+    plt.xticks(rotation=45, ha='right')
+    plt.tight_layout()
+
+    img = io.BytesIO()
+    plt.savefig(img, format='png')
+    img.seek(0)
+
+    chart_image = base64.b64encode(img.getvalue()).decode('utf-8')
+    
+    return render_template('index.html', expenses=expenses, chart_image=chart_image)
 
 @app.route('/add_expense', methods=['GET', 'POST'])
 def add_expense():
