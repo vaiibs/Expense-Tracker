@@ -14,10 +14,10 @@ Features
 Home page
 ![image](https://github.com/user-attachments/assets/c12c1bde-79c9-4d07-a1da-e6388dbcd059)
 
-Add Expanse
+Add Expanse page
 ![image](https://github.com/user-attachments/assets/e72c1663-f4b5-4fcc-b79e-27adc761950b)
 
-Edit Expanse
+Edit Expanse page
 ![image](https://github.com/user-attachments/assets/6ea5807a-d98a-4a57-91ab-798c22360e71)
 
 Technology used:
