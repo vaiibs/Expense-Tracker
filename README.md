@@ -5,7 +5,9 @@ Expense Tracker is a web application built using Flask. The app allows users to 
 Features
     
     Home Page: Displays an overview of all recorded expenses with options to edit or delete entries.
+    
     Add Expense: Allows users to input new expense details such as category, description, and amount.
+    
     Edit Expense: Enables users to update existing expense records for corrections or changes.
 
 Home page
@@ -20,5 +22,7 @@ Edit Expanse
 Technology used:
 
     Backend: Flask
+    
     Frontend: HTML and CSS
+    
     Database: SQLite (managed via Flask-SQLAlchemy)
