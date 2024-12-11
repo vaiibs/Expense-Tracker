@@ -9,7 +9,6 @@
 <body>
     <header>
         <h1>Add New Expense</h1>
-        <a href="{{ url_for('home') }}">Back to Expense List</a>
     </header>
     
     <main>
@@ -24,6 +23,8 @@
             <textarea id="comments" name="comments"></textarea><br>
 
             <button type="submit">Add Expense</button>
+
+            <a href="{{ url_for('home') }}" class="add-expense-btn">Back to Expense List</a>
         </form>
     </main>
 </body>

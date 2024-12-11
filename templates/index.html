@@ -37,8 +37,9 @@
             </tbody>
         </table>
 
-        <!-- Add Expense Button at the bottom -->
         <a href="{{ url_for('add_expense') }}" class="add-expense-btn">Add Expense</a>
+
+        <img src="data:image/png;base64,{{ chart_image }}" alt="Expense Distribution Chart" class="expense-chart">
     </main>
 </body>
 </html>
