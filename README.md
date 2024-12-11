@@ -1,4 +1,4 @@
-# Expense-Tracker
+# Full Stack Expense Tracker
 
 Expense Tracker is a web application built using Flask. The app allows users to manage expenses by adding, editing, and deleting records.
 
