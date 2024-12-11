@@ -50,7 +50,6 @@ input, textarea, button {
     box-sizing: border-box;
 }
 
-/* Styling for the delete button */
 .delete-btn {
     color: red;
     text-decoration: none;
@@ -61,7 +60,6 @@ input, textarea, button {
     text-decoration: underline;
 }
 
-/* Styling for the Add Expense button */
 .add-expense-btn {
     display: inline-block;
     margin-top: 20px;
@@ -86,4 +84,10 @@ input, textarea, button {
 
 .edit-btn:hover {
     text-decoration: underline;
+}
+.expense-chart {
+    display: block;
+    margin: 30px auto;
+    max-width: 80%; 
+    height: auto;
 }
