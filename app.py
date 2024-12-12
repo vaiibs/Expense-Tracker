@@ -32,12 +32,8 @@ def home():
     category_values = list(categories.values())
     
     fig, ax = plt.subplots()
-    ax.bar(category_labels, category_values)
-    ax.set_xlabel('Categories')
-    ax.set_ylabel('Total Expense')
-    ax.set_title('Category-wise Expense Distribution')
-    plt.xticks(rotation=45, ha='right')
-    plt.tight_layout()
+    ax.pie(category_values, labels=category_labels, autopct='%1.1f%%', startangle=90,)
+    ax.set_title('Category-wise Expense Distribution', fontweight='bold')
 
     img = io.BytesIO()
     plt.savefig(img, format='png')
