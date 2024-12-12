@@ -5,7 +5,7 @@ Expense Tracker is a web application built using Flask. The app allows users to 
 Features
     
     Home Page: Displays an overview of all recorded expenses with options to edit or delete entries.
-               A bar chart visualizes the total expenses across different categories.
+               A pie chart visualizes the total expenses across different categories.
     
     Add Expense: Allows users to input new expense details such as category, description, and amount.
     
