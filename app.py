@@ -32,7 +32,7 @@ def home():
     category_values = list(categories.values())
     
     fig, ax = plt.subplots()
-    ax.pie(category_values, labels=category_labels, autopct='%1.1f%%', startangle=90,)
+    ax.pie(category_values, labels=category_labels, autopct='%1.1f%%')
     ax.set_title('Category-wise Expense Distribution', fontweight='bold')
 
     img = io.BytesIO()
