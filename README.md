@@ -16,10 +16,10 @@ Expense Tracker is a web application built using Flask. The app allows users to 
 Home page
 ![image](https://github.com/user-attachments/assets/9c07439a-a858-4c4d-9da5-f7ead9dc5765)
 
-Add Expanse page
+Add Expense page
 ![image](https://github.com/user-attachments/assets/e72c1663-f4b5-4fcc-b79e-27adc761950b)
 
-Edit Expanse page
+Edit Expense page
 ![image](https://github.com/user-attachments/assets/6ea5807a-d98a-4a57-91ab-798c22360e71)
 
 Technology used:
