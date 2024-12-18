@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request, redirect, url_for
 from flask_sqlalchemy import SQLAlchemy
 import matplotlib.pyplot as plt
+# create temp mem to store img,text format to display
 import io
 import base64
 
@@ -17,7 +18,7 @@ class Expense(db.Model):            #create db model
 with app.app_context():    # Initialize db
     db.create_all()
 
-@app.route('/')
+@app.route('/')        #url
 def home():
     expenses = Expense.query.all() 
     
@@ -35,10 +36,9 @@ def home():
     ax.pie(category_values, labels=category_labels, autopct='%1.1f%%')
     ax.set_title('Category-wise Expense Distribution', fontweight='bold')
 
-    img = io.BytesIO()
+    img = io.BytesIO()                            # create temp mem to store img,text format to display
     plt.savefig(img, format='png')
     img.seek(0)
-
     chart_image = base64.b64encode(img.getvalue()).decode('utf-8')
     
     return render_template('index.html', expenses=expenses, chart_image=chart_image)
